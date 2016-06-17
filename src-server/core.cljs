@@ -1,5 +1,7 @@
-(ns workit.server
-  (:require [cljs.nodejs :as nodejs]))
+(ns workit.core
+  (:require [cljs.nodejs :as nodejs]
+            [workit.app :as alexa]
+            [workit.test :as test]))
 
 (nodejs/enable-util-print!)
 
@@ -7,7 +9,7 @@
 (def express (nodejs/require "express"))
 
 (defn render-page []
-  "<h1>HTML Rules</h1>")
+  (throw (js/Error. "Kow")))
 
 (defn handle-request [req res]
   (.send res (render-page)))
