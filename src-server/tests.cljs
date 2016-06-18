@@ -1,6 +1,8 @@
-(ns workit.test)
+(ns workit.tests
+  (:require [cljs.test :refer-macros [deftest is testing run-tests async]]
+            [workit.app :as alexa]))
 
-(def intent
+(def top
   (clj->js
     {
      "version" "1.0"
@@ -18,15 +20,13 @@
       "requestId" "amzn1.echo-api.request.6919844a-733e-4e89-893a-fdcb77e2ef0d"
       "intent"
       {
-       "name" "sampleIntent"
-       "slots"
-       {
-        "NAME"
-        {
-         "name" "NAME"
-         "value" "Matt"
-         }
-        }
+       "name" "top"
        }
-      }
-     }))
+      }}))
+
+(deftest test-top
+  (async done
+    (let [p (alexa/request top)]
+      (.then p (fn [res] 
+                 (is (clojure.string/includes? (.. res -response -outputSpeech -ssml) "Smash rules"))
+                 (done))))))

@@ -1,7 +1,6 @@
 (ns workit.core
   (:require [cljs.nodejs :as nodejs]
-            [workit.app :as alexa]
-            [workit.test :as test]))
+            [workit.app :as alexa]))
 
 (nodejs/enable-util-print!)
 
