@@ -1,36 +1,36 @@
-# workit
+# alexa-smash
 
-FIXME: description
+Playing with the alexa SDK from clojurescript
 
 ## Installation
 
-Download from http://example.com/FIXME.
+```
+lein deps
+
+npm install
+```
 
 ## Usage
 
-FIXME: explanation
+No external api at the moment. Just from the repl
 
-    $ java -jar workit-0.1.0-standalone.jar [args]
+```
+lein figwheel
 
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
+node resources/public/js/server/dev.js
+```
 ## License
 
-Copyright © 2016 FIXME
+Copyright (c) 2016, Jason Staten
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
