@@ -1,4 +1,4 @@
-(ns workit.app
+(ns smash.app
   (:require [cljs.nodejs :as nodejs]))
 
 (def alexa (nodejs/require "alexa-app"))

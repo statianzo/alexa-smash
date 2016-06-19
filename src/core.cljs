@@ -1,6 +1,6 @@
-(ns workit.core
+(ns smash.core
   (:require [cljs.nodejs :as nodejs]
-            [workit.app :as alexa]))
+            [smash.app :as alexa]))
 
 (nodejs/enable-util-print!)
 

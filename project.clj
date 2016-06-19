@@ -1,4 +1,4 @@
-(defproject workit "0.1.0-SNAPSHOT"
+(defproject smash "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -14,21 +14,21 @@
                         :id "dev"
                         :figwheel {
                                    :autoload true}
-                        :source-paths ["src-server"]
+                        :source-paths ["src"]
                         :compiler {
-                                   :main workit.core
-                                   :output-to "resources/public/js/server/dev.js"
-                                   :output-dir "resources/public/js/server"
+                                   :main smash.core
+                                   :output-to "lib/dev.js"
+                                   :output-dir "lib"
                                    :target :nodejs
                                    :optimizations :none
                                    :source-map true}}
                        {
                         :id "test"
-                        :source-paths ["src-server"]
+                        :source-paths ["src" "test"]
                         :compiler {
-                                   :main workit.runner
-                                   :output-to "resources/public/js/server/test.js"
-                                   :output-dir "resources/public/js/server"
+                                   :main smash.runner
+                                   :output-to "lib/test.js"
+                                   :output-dir "lib"
                                    :target :nodejs
                                    :optimizations :none
                                    :source-map true}}]}

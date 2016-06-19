@@ -1,6 +1,6 @@
-(ns workit.tests
+(ns smash.tests
   (:require [cljs.test :refer-macros [deftest is testing run-tests async]]
-            [workit.app :as alexa]))
+            [smash.app :as alexa]))
 
 (def top
   (clj->js
