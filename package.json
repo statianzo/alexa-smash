@@ -13,7 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "alexa-app": "^2.3.4"
+    "alexa-app": "^2.3.4",
+    "request": "^2.72.0"
   },
   "devDependencies": {
     "source-map-support": "^0.4.0",
