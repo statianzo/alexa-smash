@@ -6,11 +6,17 @@
 
 (def url "http://www.eventhubs.com/tiers/ssb4/")
 
+(defn- tierrow [_ tr]
+  (-> (html/load tr)
+      (apply ["td"])))
+
 (defn- tierstable [body]
   (-> (html/load body)
       (apply [".tierstable"])
       (.find "tbody")
-      (.find "tr")))
+      (.find "tr")
+      (.find "td")
+      (partition 12)))
 
 (defn tierlist []
   (go (tierstable (<! (http/fetch url)))))
