@@ -9,3 +9,6 @@
 
 (defn load [src]
   (.load cheerio src))
+
+(defn wrap [node]
+  (cheerio node))

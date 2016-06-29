@@ -9,5 +9,6 @@
         jsopts (clj->js opts)]
     (request jsopts
              (fn [err res body]
+               (if err (println err) nil)
                (a/put! c body)))
     c))
